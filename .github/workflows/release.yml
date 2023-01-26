@@ -40,6 +40,7 @@ jobs:
           asset_name: mvc_example-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
   build-documentation:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
