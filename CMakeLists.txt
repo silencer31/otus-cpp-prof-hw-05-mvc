@@ -8,8 +8,8 @@ project(mvc_example VERSION ${PROJECT_VERSION})
 configure_file(version.h.in version.h)
 
 #Main target 
-add_executable(mvc_example main.cpp)
-add_library(lib_mvc_example lib.cpp)
+add_executable(mvc_example main.cpp  "Models/documents_model.cpp" "Models/graphics_model.cpp" "View/graphics_view.cpp" "View/documents_view.cpp" "Controller/GraphicsController.cpp" "Controller/DocumentsController.cpp")
+add_library(lib_mvc_example lib.cpp  "Models/documents_model.cpp" "Models/graphics_model.cpp" "View/graphics_view.cpp" "View/documents_view.cpp" "Controller/GraphicsController.cpp" "Controller/DocumentsController.cpp")
 
 set_target_properties(mvc_example lib_mvc_example PROPERTIES
     CXX_STANDARD 17
