@@ -78,13 +78,15 @@ public:
 	void update() override;
 
 private:
-	vector_document documents; // Коллекция документов в модели.
+	std::shared_ptr<VGraphicsModel> graphics_model; // Для связи с моделью с графическими объектами.
 
 	shared_document current_document; // Текущий документ.
 
+	uint32_t last_number; // Для генерации уникального идентификатора документа.
+
+	vector_document documents; // Коллекция документов в модели.
+
 	std::string current_file; // Файл, в который экспортировали прошлый раз.
 
-	std::shared_ptr<VGraphicsModel> graphics_model; // Для связи с моделью с графическими объектами.
-
-	uint32_t last_number; // Для генерации уникального идентификатора документа.
+	
 };
